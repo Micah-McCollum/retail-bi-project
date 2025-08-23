@@ -1,0 +1,4 @@
+CREATE DATABASE retail_bi;
+USE DATABASE retail_bi;
+
+CREATE SCHEMA raw;
