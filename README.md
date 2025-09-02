@@ -1,6 +1,28 @@
 # retail-bi-project
 This project simulates a full retail analytics pipeline using MySQL, Snowflake, and Power BI. Uses Kaggle retail dataset
 
+---
+
+## Getting Started
+
+This project simulates the complete BI process. Here's how to get started:
+
+### MySQL Setup
+1. Load the flat CSV from `data/source_datasets/`
+2. Use the scripts in `mysql/ddl/` to create the normalized schema
+3. Load the dimension/fact CSVs from `mysql/data/` into the corresponding tables
+
+### Snowflake Setup
+1. Run `create_db_and_schema.sql`, `create_tables.sql`, then `create_views.sql` from `snowflake/ddl/`
+2. Verify that the `V_SALES_SUMMARY` view returns expected aggregates
+
+### Power BI
+1. Open `retail_sales_dashboard.pbix` in Power BI Desktop
+2. Refresh the dataset with your SQL or Snowflake connection
+3. Navigate pages using slicers (Month, Category, Demographics) to explore KPIs and tooltips
+
+---
+
 ## Tools & Frameworks
 
 - **MySQL** – Initial data cleaning, normalization, and schema development
@@ -82,9 +104,18 @@ The following are now implemented:
 Kaggle Retail Dataset
 (Included in data folder)
 
+Original Link: https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data
+
 ---
 
 ## Author
 
 Micah McCollum – Computer Science Graduate, Franklin University  
 Feel free to fork or reference for BI/analytics portfolio work.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+(Or update the wording if you're using another license.)
